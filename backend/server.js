@@ -121,6 +121,10 @@ app.post("/api/chat", async (req, res) => {
 
 app.use((req, res) => res.status(404).json({ error: "Not found" }));
 
-app.listen(PORT, () => {
-  console.log(`Student Support API running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Student Support API running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
