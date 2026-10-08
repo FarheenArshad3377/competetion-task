@@ -1,0 +1,20 @@
+{
+  "name": "student-support-backend",
+  "version": "1.0.0",
+  "description": "AI Student Support Assistant - Express backend (CSV retrieval + Gemini)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --dns-result-order=ipv4first server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
