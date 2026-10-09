@@ -6,7 +6,11 @@ const { FaqRetriever } = require("./retrieval");
 const { generateAnswer } = require("./gemini");
 
 const PORT = process.env.PORT || 5000;
-const CSV_PATH = process.env.FAQ_CSV_PATH || "./student_faq.csv";
+const path = require("path");
+
+const CSV_PATH =
+  process.env.FAQ_CSV_PATH ||
+  path.join(__dirname, "student_faq.csv");
 const MIN_RELEVANCE = parseFloat(process.env.MIN_RELEVANCE || "0.45");
 const TOP_K = parseInt(process.env.TOP_K || "3", 10);
 
